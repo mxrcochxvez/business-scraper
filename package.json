@@ -1,0 +1,42 @@
+{
+  "name": "business-scraper",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Electron lead generation app for Babbage LLC focused on Central Valley business prospects.",
+  "main": "dist-electron/main.cjs",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "tsc && vite build && electron-builder",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint . --ext ts,tsx --max-warnings 0"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "latest",
+    "csv-writer": "latest",
+    "electron": "latest",
+    "electron-builder": "latest",
+    "vite": "latest",
+    "typescript": "latest",
+    "react": "latest",
+    "react-dom": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "eslint": "latest",
+    "typescript-eslint": "latest"
+  },
+  "build": {
+    "appId": "com.babbagellc.businessscraper",
+    "productName": "Babbage Lead Scraper",
+    "files": [
+      "dist/**",
+      "dist-electron/**"
+    ],
+    "directories": {
+      "output": "release"
+    }
+  }
+}
